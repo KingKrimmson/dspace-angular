@@ -38,6 +38,7 @@ import { SubmissionDefinitionsConfigService } from './config/submission-definiti
 import { SubmissionFormsConfigService } from './config/submission-forms-config.service';
 import { SubmissionSectionsConfigService } from './config/submission-sections-config.service';
 import { UUIDService } from './shared/uuid.service';
+import {FeaturedCollectionService} from "./data/featured-collection.service";
 
 const IMPORTS = [
   CommonModule,
@@ -57,6 +58,7 @@ const PROVIDERS = [
   ApiService,
   CommunityDataService,
   CollectionDataService,
+  FeaturedCollectionService,
   DSOResponseParsingService,
   DSpaceRESTv2Service,
   HostWindowService,

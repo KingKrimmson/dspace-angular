@@ -1,0 +1,7 @@
+@import '../../../styles/variables.scss';
+
+:host {
+  margin-top: 2 * $card-spacer-y;
+  margin-bottom: 2 * $card-spacer-y;
+  display: block;
+}

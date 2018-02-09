@@ -1,0 +1,19 @@
+<ng-container *ngVar="(collection | async) as collectionRD">
+<h2>{{ 'home.featured-collection.head' | translate }}</h2>
+<div class="row">
+  <div class="col-md-3">
+    <div class="card">
+      <div class="card-block" *ngIf="collectionRD?.hasSucceeded">
+        <h4 class="card-title">{{ collectionRD?.payload?.name }}</h4>
+        <p class="card-text">{{ collectionRD?.payload?.shortDescription }}</p>
+        <a [routerLink]="['/collections/' + collectionRD?.payload?.uuid]" class="btn btn-primary">{{ 'home.featured-collection.visit' | translate }}</a>
+      </div>
+      <div class="card-block" *ngIf="collectionRD?.isLoading">
+        <p class="card-text">{{ 'home.featured-collection.loading' | translate }}</p>
+      </div>
+      <div class="card-block" *ngIf="collectionRD?.hasFailed">
+        <p class="card-text">{{ 'home.featured-collection.error' | translate }}</p>
+      </div>
+    </div>
+  </div>
+</div>

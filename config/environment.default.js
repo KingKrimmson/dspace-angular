@@ -9,11 +9,11 @@ module.exports = {
   },
   // The REST API server settings.
   rest: {
-    ssl: true,
-    host: 'dspace7.4science.it',
-    port: 443,
+    ssl: false,
+    host: 'localhost',
+    port: 8080,
     // NOTE: Space is capitalized because 'namespace' is a reserved string in TypeScript
-    nameSpace: '/dspace-spring-rest/api'
+    nameSpace: '/spring-rest/api'
   },
   // Caching settings
   cache: {
@@ -23,7 +23,7 @@ module.exports = {
   },
   // Angular Universal settings
   universal: {
-    preboot: true,
+    preboot: false,
     async: true,
     time: false
   },
